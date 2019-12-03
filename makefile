@@ -28,7 +28,9 @@ OBJ = hellomake.o hellofunc.o
 
 hellomake : $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS)
-	$(CC) -o inside src/inside.c 
+	$(CC) -o inside src/inside.c
+	cp inside.exe src/
+	rm inside.exe 
 
 clean :
 	rm *.o *.exe
